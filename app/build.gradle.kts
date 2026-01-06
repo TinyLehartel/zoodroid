@@ -11,8 +11,10 @@ android {
 
     defaultConfig {
         applicationId = "fr.ldnr.tiny.zoodroid"
+
         minSdk = 23
         targetSdk = 36
+        maxSdk = 42
         versionCode = 1
         versionName = "1.0"
 

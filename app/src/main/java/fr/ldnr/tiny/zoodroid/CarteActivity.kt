@@ -6,6 +6,7 @@ import android.content.Context
 import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.os.Bundle
+import android.util.Log
 
 class CarteActivity : Activity() {
 
@@ -14,6 +15,7 @@ class CarteActivity : Activity() {
 
         val carteView = CarteView(this)
         setContentView(carteView)
+        Log.w("CarteActivity", "onCreate terminé")
     }
 
     inner class CarteView(context: Context) : View(context) {
