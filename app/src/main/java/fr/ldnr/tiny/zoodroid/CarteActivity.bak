@@ -1,0 +1,36 @@
+package fr.ldnr.tiny.zoodroid;
+
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.os.Bundle;
+import android.view.View;
+
+public class CarteActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        CarteView carteView = new CarteView(this);
+        setContentView(carteView);
+    }
+
+    class CarteView extends View {
+
+        private Bitmap bitmap;
+
+        public CarteView(Context context) {
+            super(context);
+            bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.carte);
+        }
+
+        @Override
+        protected void onDraw(Canvas canvas) {
+            super.onDraw(canvas);
+            canvas.drawBitmap(bitmap, 0f, 0f, null);
+        }
+    }
+}
